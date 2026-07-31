@@ -1,6 +1,16 @@
 // Product 1 Modulo N
 /*
 Given an integer n, find the longest subsequence of [1,2,…,n−1] whose product is 1 modulo n
+
+Input : 5
+Output : 
+3
+1 2 3 
+
+Input : 8
+Output : 
+4
+1 3 5 7 
 */
 
 #include <bits/stdc++.h>

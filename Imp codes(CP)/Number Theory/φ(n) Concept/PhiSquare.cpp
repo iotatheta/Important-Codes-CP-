@@ -1,5 +1,5 @@
 // Sum of all ϕ(n)^2 in a range
-// Use unsigned long long (upto 18 * 1e18) and long long( 9 * 1e18 )
+// Use unsigned long long (upto 18.44 * 1e18) and long long( 9.22 * 1e18 )
 
 #include <bits/stdc++.h>
 using namespace std;

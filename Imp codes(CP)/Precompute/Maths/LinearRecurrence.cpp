@@ -1,4 +1,4 @@
-// Precomputation with the help of matrix exp
+// Precomputation with the help of Matrix Exponentiation
 // ele[i] stores T^(i-1)
 
 /*===============================================================

@@ -1,4 +1,6 @@
 /*
+Simple Game : 
+    
     Problem : Reach N with moving 1, 2 or 4 at a move
 */
 

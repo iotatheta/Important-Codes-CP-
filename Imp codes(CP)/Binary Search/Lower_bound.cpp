@@ -1,5 +1,5 @@
-// Binary Search [VVI.] - only can be applied when the search space is sorted
-// O(log n) think whenever there is log n factor
+// Lower bound = The smallest number that is >= x
+// Applicable when the search space is sorted
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -9,23 +9,26 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-bool is_present(const vector<ll> &arr, ll x)
+ll lower_bound_index(const vector<ll> &arr, const ll &x)
 {
-    ll low = 0, high = arr.size() - 1, mid;
+    ll low = 0, high = arr.size() - 1, mid, ans = -1;
     
     while(low <= high)
     {
         mid = low + ((high - low) >> 1ULL);
         
-        if(arr[mid] == x)
-            return true;
-        else if(x > arr[mid])
-            low = mid + 1;
-        else
+        if(arr[mid] >= x)
+        {
+            ans = mid;
             high = mid - 1;
+        }
+        else
+        {
+            low = mid + 1;
+        }
     }
     
-    return false;
+    return ans;
 }
 // TC: O(log n)
 // SC: O(1)
@@ -42,14 +45,18 @@ void solve()
         cin >> arr[i];
     }
     
+    ll ind;
+    
     while(k-- > 0)
     {
         cin >> x;
         
-        if(is_present(arr, x))
-            cout << "YES" << endl;
+        ind = lower_bound_index(arr, x);
+        
+        if(ind == -1)
+            cout << "No lower bound" << endl;
         else
-            cout << "NO" << endl;
+            cout << arr[ind] << endl;
     }
 }
 // TC: O(n + k log n)

@@ -3,6 +3,8 @@
 // prefix[i] = prefix[i-1] + arr[i]
 // range_sum(l,r) = prefix[r] - prefix[l-1] (if l>0) else prefix[r]
 
+// ** 1-based indexing with l and r inclusive
+
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,4 +1,4 @@
-// Binary Search [VVI.]
+// Binary Search [VVI.] - only can be applied when the array is sorted
 // O(log n) think whenever there is log n factor
 
 #include <bits/stdc++.h>
